@@ -6,7 +6,7 @@
   <title>Dragon's Quill</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -325,64 +325,310 @@
 <!-- ══════════════ SIMPLE EXAMPLE ══════════════ -->
 <div id="page-simple" class="page">
 
-  <div class="section section-dark">
-    <div class="container">
-      <p class="eyebrow">Simple example</p>
-      <h2 class="section-title">A minimal card layout</h2>
-      <div class="teal-divider"></div>
-      <p class="text-muted-custom">A clean, no-frills Bootstrap card grid — the basic building block of most UI layouts.</p>
-    </div>
+  
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
+  .m { max-width: 680px; margin: 0 auto; font-family: 'Montserrat', sans-serif; background: #faf7f2; }
+
+  .m-hero {
+    background: #0f0c08;
+    padding: 3.5rem 2rem 3rem;
+    text-align: center;
+    position: relative;
+  }
+  .m-hero-border {
+    position: absolute;
+    inset: 14px;
+    border: 1px solid rgba(185,149,73,0.35);
+    pointer-events: none;
+  }
+  .m-hero-corner {
+    position: absolute;
+    width: 18px; height: 18px;
+    border-color: #b99549;
+    border-style: solid;
+    border-width: 0;
+  }
+  .tl { top: 10px; left: 10px; border-top-width: 1.5px; border-left-width: 1.5px; }
+  .tr { top: 10px; right: 10px; border-top-width: 1.5px; border-right-width: 1.5px; }
+  .bl { bottom: 10px; left: 10px; border-bottom-width: 1.5px; border-left-width: 1.5px; }
+  .br { bottom: 10px; right: 10px; border-bottom-width: 1.5px; border-right-width: 1.5px; }
+
+  .m-eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #b99549;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  .m-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 46px;
+    font-weight: 300;
+    color: #f5ead8;
+    margin: 0 0 0.5rem;
+    letter-spacing: 0.12em;
+    line-height: 1.1;
+    position: relative;
+  }
+  .m-hero h1 em { font-style: italic; font-weight: 300; }
+  .m-tagline {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(185,149,73,0.7);
+    font-weight: 400;
+    position: relative;
+    margin-top: 0.25rem;
+  }
+  .m-gold-bar {
+    width: 40px; height: 1px;
+    background: #b99549;
+    margin: 1.25rem auto;
+    position: relative;
+  }
+
+  .m-body { padding: 0 2rem 2.5rem; background: #faf7f2; }
+
+  .m-section { margin-bottom: 0.25rem; }
+
+  .m-divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 2.25rem 0 1.5rem;
+  }
+  .m-divider-line { flex: 1; height: 1px; background: #d4c5a4; }
+  .m-divider-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 300;
+    color: #8a7250;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+  }
+  .m-divider-diamond {
+    width: 6px; height: 6px;
+    background: #b99549;
+    transform: rotate(45deg);
+    flex-shrink: 0;
+  }
+
+  .m-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e8e0d0;
+  }
+  .m-item:last-child { border-bottom: none; }
+  .m-item-left { flex: 1; }
+  .m-item-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1208;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+  }
+  .m-item-desc {
+    font-size: 11px;
+    color: #7a6e5f;
+    margin-top: 4px;
+    line-height: 1.8;
+    letter-spacing: 0.04em;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .m-item-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #b99549;
+    white-space: nowrap;
+    letter-spacing: 0.04em;
+  }
+
+  .badge {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 2px;
+    margin-left: 7px;
+    vertical-align: middle;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .badge-v  { background: #e8f4ee; color: #2d6b4a; border: 1px solid #b8dbc8; }
+  .badge-s  { background: #faeae6; color: #8b3320; border: 1px solid #f0bfb2; }
+
+  .m-footer {
+    text-align: center;
+    padding: 1.5rem 2rem 2rem;
+    background: #0f0c08;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(185,149,73,0.6);
+    line-height: 2.2;
+  }
+  .m-footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 300;
+    color: rgba(245,234,216,0.4);
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5rem;
+    text-transform: none;
+  }
+</style>
+
+<div class="m">
+  <div class="m-hero">
+    <div class="m-hero-border"></div>
+    <div class="m-hero-corner tl"></div>
+    <div class="m-hero-corner tr"></div>
+    <div class="m-hero-corner bl"></div>
+    <div class="m-hero-corner br"></div>
+    <div class="m-eyebrow">Est. 2012 &nbsp;·&nbsp; Roseville CA</div>
+    <h1><em>Roseville</em> Bistro</h1>
+    <div class="m-gold-bar"></div>
+    <div class="m-tagline">Farm to table &nbsp;·&nbsp; Tuesday – Sunday &nbsp;·&nbsp; 5 PM – 10 PM</div>
   </div>
 
-  <section class="section">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-sm-6 col-lg-4">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title" style="font-family:'Syne',sans-serif">Card title one</h5>
-              <p class="card-text text-muted">Some quick example text to show what a card body looks like with a short description.</p>
-              <button class="btn btn-teal btn-sm">Read more</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-4">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title" style="font-family:'Syne',sans-serif">Card title two</h5>
-              <p class="card-text text-muted">Another example card with a little more text so the grid rows line up cleanly on wider screens.</p>
-              <button class="btn btn-teal btn-sm">Read more</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-4">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title" style="font-family:'Syne',sans-serif">Card title three</h5>
-              <p class="card-text text-muted">Third card in the row. Bootstrap's equal-height utility keeps all cards the same height automatically.</p>
-              <button class="btn btn-teal btn-sm">Read more</button>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="m-body">
 
-      <div class="row mt-5 g-4 align-items-center">
-        <div class="col-md-6">
-          <h4 style="font-family:'Syne',sans-serif">A simple alert</h4>
-          <div class="alert alert-info mt-3">This is a standard Bootstrap info alert — handy for notices, tips, or status messages.</div>
-          <div class="alert alert-warning">This is a warning alert. Use it to draw attention to something that needs user action.</div>
+    <div class="m-section">
+      <div class="m-divider">
+        <div class="m-divider-line"></div>
+        <div class="m-divider-diamond"></div>
+        <div class="m-divider-text">Starters</div>
+        <div class="m-divider-diamond"></div>
+        <div class="m-divider-line"></div>
+      </div>
+      <div class="m-item">
+        <div class="m-item-left">
+          <div class="m-item-name">Burrata <span class="badge badge-v">V</span></div>
+          <div class="m-item-desc">Heirloom tomatoes &nbsp;·&nbsp; fresh basil oil &nbsp;·&nbsp; sea salt &nbsp;·&nbsp; grilled sourdough</div>
         </div>
-        <div class="col-md-6">
-          <h4 style="font-family:'Syne',sans-serif">A simple list group</h4>
-          <ul class="list-group mt-3">
-            <li class="list-group-item d-flex justify-content-between align-items-center">Item Alpha<span class="badge bg-secondary rounded-pill">14</span></li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">Item Beta<span class="badge bg-secondary rounded-pill">8</span></li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">Item Gamma<span class="badge bg-secondary rounded-pill">3</span></li>
-          </ul>
+        <div class="m-item-price">$14</div>
+      </div>
+      <div class="m-item">
+        <div class="m-item-left">
+          <div class="m-item-name">Crispy Calamari <span class="badge badge-s">Spicy</span></div>
+          <div class="m-item-desc">Lemon aioli &nbsp;·&nbsp; charred scallion &nbsp;·&nbsp; pickled peppers</div>
         </div>
+        <div class="m-item-price">$16</div>
+      </div>
+      <div class="m-item">
+        <div class="m-item-left">
+          <div class="m-item-name">French Onion Soup</div>
+          <div class="m-item-desc">Slow-caramelised onion &nbsp;·&nbsp; beef broth &nbsp;·&nbsp; gruyère crostini</div>
+        </div>
+        <div class="m-item-price">$13</div>
+      </div>
+      <div class="m-item">
+        <div class="m-item-left">
+          <div class="m-item-name">Roasted Beet Salad <span class="badge badge-v">V</span></div>
+          <div class="m-item-desc">Candied walnuts &nbsp;·&nbsp; whipped goat cheese &nbsp;·&nbsp; orange vinaigrette</div>
+        </div>
+        <div class="m-item-price">$15</div>
       </div>
     </div>
-  </section>
+
+    <div class="m-section">
+      <div class="m-divider">
+        <div class="m-divider-line"></div>
+        <div class="m-divider-diamond"></div>
+        <div class="m-divider-text">Mains</div>
+        <div class="m-divider-diamond"></div>
+        <div class="m-divider-line"></div>
+      </div>
+      <div class="m-item">
+        <div class="m-item-left">
+          <div class="m-item-name">Pan-Seared Salmon</div>
+          <div class="m-item-desc">Lemon-dill beurre blanc &nbsp;·&nbsp; wilted spinach &nbsp;·&nbsp; roasted fingerling potatoes</div>
+        </div>
+        <div class="m-item-price">$34</div>
+      </div>
+      <div class="m-item">
+        <div class="m-item-left">
+          <div class="m-item-name">8 oz Ribeye</div>
+          <div class="m-item-desc">Compound herb butter &nbsp;·&nbsp; grilled asparagus &nbsp;·&nbsp; pommes frites</div>
+        </div>
+        <div class="m-item-price">$48</div>
+      </div>
+      <div class="m-item">
+        <div class="m-item-left">
+          <div class="m-item-name">Mushroom Risotto <span class="badge badge-v">V</span></div>
+          <div class="m-item-desc">Porcini &nbsp;·&nbsp; cremini &nbsp;·&nbsp; truffle oil &nbsp;·&nbsp; aged parmesan &nbsp;·&nbsp; fresh thyme</div>
+        </div>
+        <div class="m-item-price">$28</div>
+      </div>
+      <div class="m-item">
+        <div class="m-item-left">
+          <div class="m-item-name">Half Roast Chicken</div>
+          <div class="m-item-desc">Pan jus &nbsp;·&nbsp; roasted garlic mash &nbsp;·&nbsp; seasonal vegetables</div>
+        </div>
+        <div class="m-item-price">$32</div>
+      </div>
+      <div class="m-item">
+        <div class="m-item-left">
+          <div class="m-item-name">Tagliatelle Arrabbiata <span class="badge badge-s">Spicy</span> <span class="badge badge-v">V</span></div>
+          <div class="m-item-desc">San Marzano tomato &nbsp;·&nbsp; garlic &nbsp;·&nbsp; chilli &nbsp;·&nbsp; fresh basil &nbsp;·&nbsp; pecorino</div>
+        </div>
+        <div class="m-item-price">$24</div>
+      </div>
+    </div>
+
+    <div class="m-section">
+      <div class="m-divider">
+        <div class="m-divider-line"></div>
+        <div class="m-divider-diamond"></div>
+        <div class="m-divider-text">Desserts</div>
+        <div class="m-divider-diamond"></div>
+        <div class="m-divider-line"></div>
+      </div>
+      <div class="m-item">
+        <div class="m-item-left">
+          <div class="m-item-name">Crème Brûlée <span class="badge badge-v">V</span></div>
+          <div class="m-item-desc">Tahitian vanilla &nbsp;·&nbsp; caramelised sugar crust &nbsp;·&nbsp; seasonal berries</div>
+        </div>
+        <div class="m-item-price">$11</div>
+      </div>
+      <div class="m-item">
+        <div class="m-item-left">
+          <div class="m-item-name">Chocolate Fondant <span class="badge badge-v">V</span></div>
+          <div class="m-item-desc">Warm dark chocolate centre &nbsp;·&nbsp; vanilla bean ice cream &nbsp;·&nbsp; cocoa dust</div>
+        </div>
+        <div class="m-item-price">$12</div>
+      </div>
+      <div class="m-item">
+        <div class="m-item-left">
+          <div class="m-item-name">Affogato <span class="badge badge-v">V</span></div>
+          <div class="m-item-desc">Double espresso &nbsp;·&nbsp; house-made vanilla gelato</div>
+        </div>
+        <div class="m-item-price">$9</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="m-footer">
+    <div class="m-footer-logo">Rosewood Bistro</div>
+    <span class="badge badge-v" style="font-family:Montserrat">V</span> Vegetarian &nbsp;·&nbsp;
+    <span class="badge badge-s" style="font-family:Montserrat">Spicy</span> Contains chilli<br>
+    Please inform your server of any allergies or dietary requirements<br>
+    20% gratuity added to parties of 6 or more
+  </div>
+</div>
 
 </div>
 
@@ -530,19 +776,15 @@
           <div class="teal-divider"></div>
           <div class="d-flex gap-3 mb-3">
             <div class="feature-icon flex-shrink-0"><i class="bi bi-envelope-fill"></i></div>
-            <div><strong>Email</strong><br><span class="text-muted-custom small">hello@Dragon's Quill.example.com</span></div>
+            <div><strong>Email</strong><br><span class="text-muted-custom small">contact@dragons-quill.com</span></div>
           </div>
           <div class="d-flex gap-3 mb-3">
             <div class="feature-icon flex-shrink-0"><i class="bi bi-telephone-fill"></i></div>
-            <div><strong>Phone</strong><br><span class="text-muted-custom small">+1 (800) 555-0190</span></div>
-          </div>
-          <div class="d-flex gap-3 mb-3">
-            <div class="feature-icon flex-shrink-0"><i class="bi bi-geo-alt-fill"></i></div>
-            <div><strong>Office</strong><br><span class="text-muted-custom small">123 Dragon's Quill Way, Suite 400<br>San Francisco, CA 94103</span></div>
+            <div><strong>Phone</strong><br><span class="text-muted-custom small">(971) 209-5091</span></div>
           </div>
           <div class="d-flex gap-3">
             <div class="feature-icon flex-shrink-0"><i class="bi bi-clock-fill"></i></div>
-            <div><strong>Hours</strong><br><span class="text-muted-custom small">Mon – Fri, 9 AM – 6 PM PT<br>Enterprise: 24/7</span></div>
+            <div><strong>Hours</strong><br><span class="text-muted-custom small">Mon – Fri, 7 AM – 7 PM PT<br>Emergency Support: 24/7</span></div>
           </div>
         </div>
       </div>
