@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dragon's Quill</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ══════════════ NAVBAR ══════════════ -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" onclick="showPage('home')">Dragon's <span>Quill</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto gap-1">
+        <li class="nav-item"><a class="nav-link active" href="#" onclick="showPage('home')">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('about')">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('products')">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('pricing')">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('simple')">Simple Example</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('complex')">Complex Example</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('contact')">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════ HOME ══════════════ -->
+<div id="page-home" class="page active">
+
+  <section class="hero">
+    <div class="container">
+      <p class="hero-eyebrow">Welcome to Dragon's Quill</p>
+      <h1>Open your business to the internet with our platform</h1>
+      <p class="lead">Dragon's Quill gives small businesses the opportunity to create and host websites that will stand out from your competitors.</p>
+      <div class="d-flex gap-3 mt-4 flex-wrap">
+        <button class="btn btn-teal" onclick="showPage('pricing')">See our competitive pricing.</button>
+        <button class="btn btn-outline-teal" onclick="showPage('products')">See what we offer.</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="stats-strip" hidden="true">
+    <div class="container">
+      <div class="row text-center g-4">
+        <div class="col-6 col-md-3"><div class="stat-val">14k+</div><div class="stat-lbl">Teams using Dragon's Quill</div></div>
+        <div class="col-6 col-md-3"><div class="stat-val">99.9%</div><div class="stat-lbl">Uptime SLA</div></div>
+        <div class="col-6 col-md-3"><div class="stat-val">4.8★</div><div class="stat-lbl">Average rating</div></div>
+        <div class="col-6 col-md-3"><div class="stat-val">2 min</div><div class="stat-lbl">Avg. setup time</div></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Core capabilities</p>
+      <h2 class="section-title mb-1">Only what you need, nothing you don't</h2>
+      <div class="teal-divider"></div>
+      <div class="row g-4 mt-1">
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+            <h5>Clean Design</h5>
+            <p class="text-muted-custom small mb-0">We use the latest technologies to give you a simple, clean website that will appeal to your customers.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="bi bi-shield-lock-fill"></i></div>
+            <h5>Managed Hosting</h5>
+            <p class="text-muted-custom small mb-0">Dragon's Quill offers website hosting, security, and routine maintenance for all customers.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="bi bi bi-puzzle-fill"></i></div>
+            <h5>Free Updates</h5>
+            <p class="text-muted-custom small mb-0">We offer text and design changes free of charge to all customers with our hosting package.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="bi bi-people-fill"></i></div>
+            <h5>24/7 Monitoring</h5>
+            <p class="text-muted-custom small mb-0">We have state of the art monitoring of all our websites to minimize downtime and keep you visible to customers at all times.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="bi bi-headset"></i></div>
+            <h5>24/7 Support</h5>
+            <p class="text-muted-custom small mb-0">Our technicians will respond within 24 hours on any plan. </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="bi bi-cloud-upload-fill"></i></div>
+            <h5>The Source Code is always available.</h5>
+            <p class="text-muted-custom small mb-0">At any time you can request to view the code behind your website.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ══════════════ ABOUT ══════════════ -->
+<div id="page-about" class="page">
+
+  <div class="section section-dark">
+    <div class="container">
+      <p class="eyebrow">Our story</p>
+      <h2 class="section-title">Built by a small business, for small businesses.</h2>
+      <div class="teal-divider"></div>
+      <p class="text-muted-custom" style="max-width:620px">Dragon's Quill started in 2026 by a developer and his wife. Ethan was tired of seeing businesses with no online information, so he started Dragon's Quill. Here we seek to forge a relationship with our clients, focusing on long term collaboration over short term monetization.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <p class="eyebrow">Mission</p>
+          <h3 class="section-title">Provide businesses with online information and increased visibility.</h3>
+          <div class="teal-divider"></div>
+          <p class="text-muted-custom">At Dragon's Quill we strive to provide a website for small businesses in need. We seek to build relationships with our clients that will last for years, all while providing them with the tools they need to succeed.</p>
+        </div>
+        <div class="col-lg-6">
+          <div class="row g-3">
+            <div class="col-6"><div class="feature-card text-center p-3"><div class="stat-val" style="font-size:1.8rem;color:var(--teal)">2026</div><div class="small text-muted-custom">Founded</div></div></div>
+            <div class="col-6"><div class="feature-card text-center p-3"><div class="stat-val" style="font-size:1.8rem;color:var(--teal)">2</div><div class="small text-muted-custom">Team members</div></div></div>
+            <div class="col-6"><div class="feature-card text-center p-3"><div class="stat-val" style="font-size:1.8rem;color:var(--teal)">2</div><div class="small text-muted-custom">States</div></div></div>
+            <div class="col-6"><div hidden="true" class="feature-card text-center p-3"><div class="stat-val" style="font-size:1.8rem;color:var(--teal)">$42M</div><div class="small text-muted-custom">Series B raised</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:#fff;border-top:1px solid var(--border)">
+    <div class="container">
+      <p class="eyebrow">The team</p>
+      <h3 class="section-title mb-4">Meet the people behind Dragon's Quill</h3>
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-3"><div class="team-card"><div class="team-avatar">EH</div><strong>Ethan Hunter</strong><div class="small text-muted-custom">Founder & CEO</div></div></div>
+        <div class="col-sm-6 col-lg-3"><div class="team-card"><div class="team-avatar">SH</div><strong>Sophia Hunter</strong><div class="small text-muted-custom">VP & Graphic Designer</div></div></div>
+        <div class="col-sm-6 col-lg-3"><div class="team-card"><div class="team-avatar">HH</div><strong>Hung Huynh</strong><div class="small text-muted-custom">VP & Developer</div></div></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ══════════════ PRODUCTS ══════════════ -->
+<div id="page-products" class="page">
+
+  <div class="section section-dark">
+    <div class="container">
+      <p class="eyebrow">What we offer</p>
+      <h2 class="section-title">The Dragon's Quill product suite</h2>
+      <div class="teal-divider"></div>
+      <p class="text-muted-custom" style="max-width:580px">Three website designs ranging in complexity. Pick what you need; add more when you're ready.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="product-card">
+            <div class="product-thumb"><i class="bi bi-window"></i></div>
+            <div class="product-body">
+              <span class="badge-teal">Basic Brochure</span>
+              <h5 class="mt-2 mb-1" style="font-family:'Syne',sans-serif;font-weight:700">Simple Websites for Straightforward Businesses</h5>
+              <p class="small text-muted-custom mb-3">The most basic option. Up to 10 pages, text and images only. This current website is an example of this option.</p>
+              <button class="btn btn-teal btn-sm" onclick="showPage('pricing')">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="product-card">
+            <div class="product-thumb"><i class="bi bi-graph-up-arrow"></i></div>
+            <div class="product-body">
+              <span class="badge-teal">Integrated Website</span>
+              <h5 class="mt-2 mb-1" style="font-family:'Syne',sans-serif;font-weight:700">The Almost Full Package</h5>
+              <p class="small text-muted-custom mb-3">This package offers nearly everything short of taking payments. Appointments, interactive elements, database integration, user logins, etc. This option is priced by component. The less you need, the less you pay.</p>
+              <button class="btn btn-teal btn-sm" onclick="showPage('pricing')">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="product-card">
+            <div class="product-thumb"><i class="bi bi-currency-dollar"></i></div>
+            <div class="product-body">
+              <span class="badge-teal">Payments</span>
+              <h5 class="mt-2 mb-1" style="font-family:'Syne',sans-serif;font-weight:700">Your Digital Storefront.</h5>
+              <p class="small text-muted-custom mb-3">The true Full Package; you'll get everything from the Almost Full Package, plus a digital storefront.</p>
+              <button class="btn btn-teal btn-sm" onclick="showPage('pricing')">Learn more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5 align-items-center g-5">
+        <div class="col-lg-6">
+          <p class="eyebrow">How it works</p>
+          <h3 class="section-title">From start to finished design.</h3>
+          <div class="teal-divider"></div>
+          <div class="d-flex gap-3 mb-3">
+            <div class="feature-icon flex-shrink-0"><i class="bi bi-1-circle-fill"></i></div>
+            <div><strong>The Design Meeting</strong><p class="small text-muted-custom mb-0">You'll sit down with our team and design a page to your liking.</p></div>
+          </div>
+          <div class="d-flex gap-3 mb-3">
+            <div class="feature-icon flex-shrink-0"><i class="bi bi-2-circle-fill"></i></div>
+            <div><strong>We Start Working</strong><p class="small text-muted-custom mb-0">Our team gets to work! We'll do all the heavy lifting, and make your website a reality.</p></div>
+          </div>
+          <div class="d-flex gap-3">
+            <div class="feature-icon flex-shrink-0"><i class="bi bi-3-circle-fill"></i></div>
+            <div><strong>Go Live!</strong><p class="small text-muted-custom mb-0">Once the work is complete, we'll deploy your new website to a domain name of your choice.</p></div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="code-block" hidden="true"> <!--Replace with an image later.-->
+<span class="cm">// Dragon's Quill.config.js</span><br>
+<span class="kw">export default</span> {<br>
+&nbsp;&nbsp;project: <span class="str">"my-app"</span>,<br>
+&nbsp;&nbsp;deploy: {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;strategy: <span class="str">"canary"</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rolloutPercent: <span class="kw">10</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;autoRollback: <span class="kw">true</span><br>
+&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;analytics: {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sessionReplay: <span class="kw">true</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;funnels: [<span class="str">"signup"</span>, <span class="str">"checkout"</span>]<br>
+&nbsp;&nbsp;}<br>
+};
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ══════════════ PRICING ══════════════ -->
+<div id="page-pricing" class="page">
+
+  <div class="section section-dark">
+    <div class="container text-center">
+      <p class="eyebrow">Pricing</p>
+      <h2 class="section-title">Simple, honest pricing</h2>
+      <div class="teal-divider mx-auto"></div>
+      <p class="text-muted-custom mx-auto" style="max-width:480px">All pricing plans are determined by your website. Small designs get small prices.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-md-4">
+          <div class="pricing-card">
+            <div class="pricing-badge">Most Popular</div>
+            <p class="eyebrow mb-1">Basic Brochure</p>
+            <div class="price-val">$50<span class="price-period">/mo</span></div>
+            <p class="small text-muted-custom mt-1 mb-3">Small websites for straightforward businesses.</p>
+            <hr>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>$100 per page for design and development.</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>Professional website hosting.</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>Upt to 10 pages.</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>Text and Images only.</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>Free upates within this plan.</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>24/7 monitoring and support.</div>
+            <button class="btn btn-outline-teal w-100 mt-3" onclick="showPage('contact')">Get started</button>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="pricing-card featured">
+            <p class="eyebrow mb-1">Almost Full Package</p>
+            <div class="price-val">$100+<span class="price-period">/mo</span></div>
+            <p class="small text-muted-custom mt-1 mb-3">For businesses with complex needs.</p>
+            <hr>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>$1000+ for design and development. Cost determined by features.</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>Professional website hosting.</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>Design determined by your needs.</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>Free text and image updates. </div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>24/7 monitoring and support.</div>
+            <div class="pricing-feature" style="color:var(--muted)"><i class="bi bi-x-circle" style="color:var(--muted)"></i>Payments</div>
+            <button class="btn btn-teal w-100 mt-3" onclick="showPage('contact')">Contact us!</button>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="pricing-card">
+            <p class="eyebrow mb-1">Digital Storefront</p>
+            <div class="price-val">$250+<span class="price-period">/mo</span></div>
+            <p class="small text-muted-custom mt-1 mb-3">For businesses who want to sell products through the internet.</p>
+            <hr>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>$10,000+ for design and development.</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>All benefits from the Almost Full Package.</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>Payment Integration through Stripe.</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>24/7 monitoring and support.</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>Extra Secure hosting.</div>
+            <button class="btn btn-outline-teal w-100 mt-3" onclick="showPage('contact')">Contact us!</button>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="text-center text-muted-custom small mt-4">All prices in USD. <a href="#" onclick="showPage('products')" style="color:var(--teal)">View our product comparison →</a></p>
+    </div>
+  </section>
+
+</div>
+
+<!-- ══════════════ SIMPLE EXAMPLE ══════════════ -->
+<div id="page-simple" class="page">
+
+  <div class="section section-dark">
+    <div class="container">
+      <p class="eyebrow">Simple example</p>
+      <h2 class="section-title">A minimal card layout</h2>
+      <div class="teal-divider"></div>
+      <p class="text-muted-custom">A clean, no-frills Bootstrap card grid — the basic building block of most UI layouts.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title" style="font-family:'Syne',sans-serif">Card title one</h5>
+              <p class="card-text text-muted">Some quick example text to show what a card body looks like with a short description.</p>
+              <button class="btn btn-teal btn-sm">Read more</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title" style="font-family:'Syne',sans-serif">Card title two</h5>
+              <p class="card-text text-muted">Another example card with a little more text so the grid rows line up cleanly on wider screens.</p>
+              <button class="btn btn-teal btn-sm">Read more</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title" style="font-family:'Syne',sans-serif">Card title three</h5>
+              <p class="card-text text-muted">Third card in the row. Bootstrap's equal-height utility keeps all cards the same height automatically.</p>
+              <button class="btn btn-teal btn-sm">Read more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5 g-4 align-items-center">
+        <div class="col-md-6">
+          <h4 style="font-family:'Syne',sans-serif">A simple alert</h4>
+          <div class="alert alert-info mt-3">This is a standard Bootstrap info alert — handy for notices, tips, or status messages.</div>
+          <div class="alert alert-warning">This is a warning alert. Use it to draw attention to something that needs user action.</div>
+        </div>
+        <div class="col-md-6">
+          <h4 style="font-family:'Syne',sans-serif">A simple list group</h4>
+          <ul class="list-group mt-3">
+            <li class="list-group-item d-flex justify-content-between align-items-center">Item Alpha<span class="badge bg-secondary rounded-pill">14</span></li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">Item Beta<span class="badge bg-secondary rounded-pill">8</span></li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">Item Gamma<span class="badge bg-secondary rounded-pill">3</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ══════════════ COMPLEX EXAMPLE ══════════════ -->
+<div id="page-complex" class="page">
+
+  <div class="section section-dark">
+    <div class="container">
+      <p class="eyebrow">Complex example</p>
+      <h2 class="section-title">Dashboard layout with tabs & table</h2>
+      <div class="teal-divider"></div>
+      <p class="text-muted-custom">Combines a metric strip, tabbed content areas, a data table, and a progress panel in one layout.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- Metric strip -->
+      <div class="row g-3 mb-4">
+        <div class="col-6 col-md-3"><div class="feature-card text-center"><div class="stat-val" style="color:var(--teal);font-size:1.6rem">$84,210</div><div class="small text-muted-custom">Revenue MTD</div></div></div>
+        <div class="col-6 col-md-3"><div class="feature-card text-center"><div class="stat-val" style="color:var(--teal);font-size:1.6rem">1,342</div><div class="small text-muted-custom">Active users</div></div></div>
+        <div class="col-6 col-md-3"><div class="feature-card text-center"><div class="stat-val" style="color:var(--teal);font-size:1.6rem">97.4%</div><div class="small text-muted-custom">Satisfaction</div></div></div>
+        <div class="col-6 col-md-3"><div class="feature-card text-center"><div class="stat-val" style="color:var(--teal);font-size:1.6rem">24</div><div class="small text-muted-custom">Open tickets</div></div></div>
+      </div>
+
+      <!-- Tabs -->
+      <ul class="nav nav-tabs mb-3" id="dashTabs">
+        <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-orders">Orders</button></li>
+        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-progress">Progress</button></li>
+        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-log">Activity log</button></li>
+      </ul>
+
+      <div class="tab-content">
+
+        <!-- Orders table -->
+        <div class="tab-pane fade show active" id="tab-orders">
+          <div class="table-responsive">
+            <table class="table table-hover align-middle">
+              <thead class="table-dark">
+                <tr><th>#</th><th>Customer</th><th>Product</th><th>Amount</th><th>Status</th><th>Date</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>#1041</td><td>Maria G.</td><td>Dragon's Quill Pro</td><td>$49</td><td><span class="badge bg-success">Paid</span></td><td>Jun 17, 2026</td></tr>
+                <tr><td>#1040</td><td>Tom R.</td><td>Dragon's Quill Enterprise</td><td>$199</td><td><span class="badge bg-success">Paid</span></td><td>Jun 16, 2026</td></tr>
+                <tr><td>#1039</td><td>Priya N.</td><td>Dragon's Quill Pro</td><td>$49</td><td><span class="badge bg-warning text-dark">Pending</span></td><td>Jun 15, 2026</td></tr>
+                <tr><td>#1038</td><td>Leo F.</td><td>Dragon's Quill Starter</td><td>$0</td><td><span class="badge bg-secondary">Free</span></td><td>Jun 14, 2026</td></tr>
+                <tr><td>#1037</td><td>Aisha B.</td><td>Dragon's Quill Enterprise</td><td>$199</td><td><span class="badge bg-danger">Refunded</span></td><td>Jun 12, 2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Progress -->
+        <div class="tab-pane fade" id="tab-progress">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <h6 class="fw-semibold mb-3">Q2 Goals</h6>
+              <p class="small text-muted-custom mb-1">Revenue <span class="float-end">84%</span></p>
+              <div class="progress mb-3" style="height:8px"><div class="progress-bar" style="width:84%;background:var(--teal)"></div></div>
+              <p class="small text-muted-custom mb-1">New signups <span class="float-end">61%</span></p>
+              <div class="progress mb-3" style="height:8px"><div class="progress-bar" style="width:61%;background:var(--teal)"></div></div>
+              <p class="small text-muted-custom mb-1">Churn reduction <span class="float-end">38%</span></p>
+              <div class="progress mb-3" style="height:8px"><div class="progress-bar" style="width:38%;background:#f59e0b"></div></div>
+              <p class="small text-muted-custom mb-1">NPS target <span class="float-end">92%</span></p>
+              <div class="progress" style="height:8px"><div class="progress-bar" style="width:92%;background:var(--teal)"></div></div>
+            </div>
+            <div class="col-md-6">
+              <h6 class="fw-semibold mb-3">Team velocity</h6>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item px-0 d-flex justify-content-between"><span>Engineering</span><span class="badge" style="background:var(--teal);color:var(--navy)">On track</span></li>
+                <li class="list-group-item px-0 d-flex justify-content-between"><span>Design</span><span class="badge" style="background:var(--teal);color:var(--navy)">On track</span></li>
+                <li class="list-group-item px-0 d-flex justify-content-between"><span>Marketing</span><span class="badge bg-warning text-dark">At risk</span></li>
+                <li class="list-group-item px-0 d-flex justify-content-between"><span>Sales</span><span class="badge bg-success">Ahead</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Activity log -->
+        <div class="tab-pane fade" id="tab-log">
+          <ul class="list-unstyled">
+            <li class="d-flex gap-3 mb-3"><div class="feature-icon flex-shrink-0" style="width:32px;height:32px;font-size:0.9rem"><i class="bi bi-person-plus-fill"></i></div><div><strong>New user signed up</strong> — Maria G. joined the Pro plan.<br><small class="text-muted-custom">Today, 09:41 AM</small></div></li>
+            <li class="d-flex gap-3 mb-3"><div class="feature-icon flex-shrink-0" style="width:32px;height:32px;font-size:0.9rem"><i class="bi bi-cloud-upload-fill"></i></div><div><strong>Deployment pushed</strong> — v2.14.1 deployed to production.<br><small class="text-muted-custom">Today, 08:15 AM</small></div></li>
+            <li class="d-flex gap-3 mb-3"><div class="feature-icon flex-shrink-0" style="width:32px;height:32px;font-size:0.9rem"><i class="bi bi-exclamation-triangle-fill"></i></div><div><strong>Alert triggered</strong> — P95 latency exceeded 800 ms for 3 min.<br><small class="text-muted-custom">Yesterday, 11:52 PM</small></div></li>
+            <li class="d-flex gap-3"><div class="feature-icon flex-shrink-0" style="width:32px;height:32px;font-size:0.9rem"><i class="bi bi-patch-check-fill"></i></div><div><strong>Incident resolved</strong> — Latency returned to normal after auto-rollback.<br><small class="text-muted-custom">Yesterday, 11:59 PM</small></div></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ══════════════ CONTACT ══════════════ -->
+<div id="page-contact" class="page">
+
+  <div class="section section-dark">
+    <div class="container">
+      <p class="eyebrow">Get in touch</p>
+      <h2 class="section-title">We'd love to hear from you</h2>
+      <div class="teal-divider"></div>
+      <p class="text-muted-custom" style="max-width:520px">Whether you have a question, a feature request, or just want to say hello — drop us a line and we'll reply within one business day.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-6">
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label>First name</label>
+              <input class="contact-input" type="text" placeholder="Jane">
+            </div>
+            <div class="col-sm-6">
+              <label>Last name</label>
+              <input class="contact-input" type="text" placeholder="Doe">
+            </div>
+            <div class="col-12">
+              <label>Email address</label>
+              <input class="contact-input" type="email" placeholder="jane@example.com">
+            </div>
+            <div class="col-12">
+              <label>Subject</label>
+              <select class="contact-input">
+                <option>General enquiry</option>
+                <option>Sales question</option>
+                <option>Technical support</option>
+                <option>Partnership</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label>Message</label>
+              <textarea class="contact-input" rows="5" placeholder="Tell us what's on your mind…"></textarea>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-teal px-4">Send message</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <h5 style="font-family:'Syne',sans-serif;font-weight:700">Other ways to reach us</h5>
+          <div class="teal-divider"></div>
+          <div class="d-flex gap-3 mb-3">
+            <div class="feature-icon flex-shrink-0"><i class="bi bi-envelope-fill"></i></div>
+            <div><strong>Email</strong><br><span class="text-muted-custom small">hello@Dragon's Quill.example.com</span></div>
+          </div>
+          <div class="d-flex gap-3 mb-3">
+            <div class="feature-icon flex-shrink-0"><i class="bi bi-telephone-fill"></i></div>
+            <div><strong>Phone</strong><br><span class="text-muted-custom small">+1 (800) 555-0190</span></div>
+          </div>
+          <div class="d-flex gap-3 mb-3">
+            <div class="feature-icon flex-shrink-0"><i class="bi bi-geo-alt-fill"></i></div>
+            <div><strong>Office</strong><br><span class="text-muted-custom small">123 Dragon's Quill Way, Suite 400<br>San Francisco, CA 94103</span></div>
+          </div>
+          <div class="d-flex gap-3">
+            <div class="feature-icon flex-shrink-0"><i class="bi bi-clock-fill"></i></div>
+            <div><strong>Hours</strong><br><span class="text-muted-custom small">Mon – Fri, 9 AM – 6 PM PT<br>Enterprise: 24/7</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  © 2026 Dragon's Quill Inc. — <a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Status</a>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script>
+  const pages = ['home','about','products','pricing','simple','complex','contact'];
+
+  function showPage(id) {
+    pages.forEach(p => {
+      document.getElementById('page-' + p).classList.toggle('active', p === id);
+    });
+    // update active nav link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('onclick')?.includes("'" + id + "'")) {
+        link.classList.add('active');
+      }
+    });
+    // collapse mobile nav
+    const navMenu = document.getElementById('navMenu');
+    if (navMenu.classList.contains('show')) {
+      new bootstrap.Collapse(navMenu).hide();
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
