@@ -14,7 +14,7 @@
 <!-- ══════════════ NAVBAR ══════════════ -->
 <nav class="navbar navbar-expand-lg sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#" onclick="showPage('home')">Dragon's <span>Quill</span></a>
+    <a class="navbar-brand" href="#" onclick="showPage('home')">Dragon's Quill <span>Web Design</span></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -24,8 +24,8 @@
         <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('about')">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('products')">Products</a></li>
         <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('pricing')">Pricing</a></li>
-        <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('simple')">Simple Example</a></li>
-        <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('complex')">Complex Example</a></li>
+        <li hidden="true" class="nav-item"><a class="nav-link" href="#" onclick="showPage('simple')">Simple Example</a></li>
+        <li hidden="true" class="nav-item"><a class="nav-link" href="#" onclick="showPage('complex')">Complex Example</a></li>
         <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('contact')">Contact</a></li>
       </ul>
     </div>
@@ -68,12 +68,12 @@
           <div class="feature-card">
             <div class="feature-icon"><i class="bi bi-lightning-charge-fill"></i></div>
             <h5>Clean Design</h5>
-            <p class="text-muted-custom small mb-0">We use the latest technologies to give you a simple, clean website that will appeal to your customers.</p>
+            <p class="text-muted-custom small mb-0">Our pages are clean HTML and CSS giving you the fastest load times, and preventing bloat.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="feature-card">
-            <div class="feature-icon"><i class="bi bi-shield-lock-fill"></i></div>
+            <div class="feature-icon"><i class="bi bi-cloud-upload-fill"></i></div>
             <h5>Managed Hosting</h5>
             <p class="text-muted-custom small mb-0">Dragon's Quill offers website hosting, security, and routine maintenance for all customers.</p>
           </div>
@@ -83,6 +83,13 @@
             <div class="feature-icon"><i class="bi bi bi-puzzle-fill"></i></div>
             <h5>Free Updates</h5>
             <p class="text-muted-custom small mb-0">We offer text and design changes free of charge to all customers with our hosting package.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="bi bi-shield-lock-fill"></i></div>
+            <h5>100% Secure.</h5>
+            <p class="text-muted-custom small mb-0">Our code is 100% secure. Both our pages and our hosting environment are protected from attacks.</p>
           </div>
         </div>
         <div class="col-md-4">
@@ -97,13 +104,6 @@
             <div class="feature-icon"><i class="bi bi-headset"></i></div>
             <h5>24/7 Support</h5>
             <p class="text-muted-custom small mb-0">Our technicians will respond within 24 hours on any plan. </p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="feature-card">
-            <div class="feature-icon"><i class="bi bi-cloud-upload-fill"></i></div>
-            <h5>The Source Code is always available.</h5>
-            <p class="text-muted-custom small mb-0">At any time you can request to view the code behind your website.</p>
           </div>
         </div>
       </div>
@@ -132,12 +132,13 @@
           <h3 class="section-title">Provide businesses with online information and increased visibility.</h3>
           <div class="teal-divider"></div>
           <p class="text-muted-custom">At Dragon's Quill we strive to provide a website for small businesses in need. We seek to build relationships with our clients that will last for years, all while providing them with the tools they need to succeed.</p>
+          <p class="text-muted-custom">Our web designs focus on creating long term, lasting impacts for our customers. Whether you need an informational site, or a online shop we can deliver.</p>
         </div>
         <div class="col-lg-6">
           <div class="row g-3">
             <div class="col-6"><div class="feature-card text-center p-3"><div class="stat-val" style="font-size:1.8rem;color:var(--teal)">2026</div><div class="small text-muted-custom">Founded</div></div></div>
             <div class="col-6"><div class="feature-card text-center p-3"><div class="stat-val" style="font-size:1.8rem;color:var(--teal)">2</div><div class="small text-muted-custom">Team members</div></div></div>
-            <div class="col-6"><div class="feature-card text-center p-3"><div class="stat-val" style="font-size:1.8rem;color:var(--teal)">2</div><div class="small text-muted-custom">States</div></div></div>
+            <div class="col-6"><div class="feature-card text-center p-3"><div class="stat-val" style="font-size:1.8rem;color:var(--teal)">1</div><div class="small text-muted-custom">State</div></div></div>
             <div class="col-6"><div hidden="true" class="feature-card text-center p-3"><div class="stat-val" style="font-size:1.8rem;color:var(--teal)">$42M</div><div class="small text-muted-custom">Series B raised</div></div></div>
           </div>
         </div>
@@ -152,7 +153,7 @@
       <div class="row g-4">
         <div class="col-sm-6 col-lg-3"><div class="team-card"><div class="team-avatar">EH</div><strong>Ethan Hunter</strong><div class="small text-muted-custom">Founder & CEO</div></div></div>
         <div class="col-sm-6 col-lg-3"><div class="team-card"><div class="team-avatar">SH</div><strong>Sophia Hunter</strong><div class="small text-muted-custom">VP & Graphic Designer</div></div></div>
-        <div class="col-sm-6 col-lg-3"><div class="team-card"><div class="team-avatar">HH</div><strong>Hung Huynh</strong><div class="small text-muted-custom">VP & Developer</div></div></div>
+        <div hidden="true" class="col-sm-6 col-lg-3"><div class="team-card"><div class="team-avatar">HH</div><strong>Hung Huynh</strong><div class="small text-muted-custom">VP & Developer</div></div></div>
       </div>
     </div>
   </section>
@@ -267,32 +268,16 @@
       <div class="row g-4 justify-content-center">
 
         <div class="col-md-4">
-          <div class="pricing-card">
+          <div class="pricing-card featured">
             <div class="pricing-badge">Most Popular</div>
-            <p class="eyebrow mb-1">Basic Brochure</p>
-            <div class="price-val">$50<span class="price-period">/mo</span></div>
-            <p class="small text-muted-custom mt-1 mb-3">Small websites for straightforward businesses.</p>
+            <p class="eyebrow mb-1">Option 1</p>
+            <div class="price-val">$150<span class="price-period">/mo</span></div>
+            <p class="small text-muted-custom mt-1 mb-3">Our brochure based design.</p>
             <hr>
-            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>$100 per page for design and development.</div>
-            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>Professional website hosting.</div>
-            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>Upt to 10 pages.</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>$0 up front. Up to 5 pages.</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>Professional website hosting included.</div>
             <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>Text and Images only.</div>
             <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>Free upates within this plan.</div>
-            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>24/7 monitoring and support.</div>
-            <button class="btn btn-outline-teal w-100 mt-3" onclick="showPage('contact')">Get started</button>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="pricing-card featured">
-            <p class="eyebrow mb-1">Almost Full Package</p>
-            <div class="price-val">$100+<span class="price-period">/mo</span></div>
-            <p class="small text-muted-custom mt-1 mb-3">For businesses with complex needs.</p>
-            <hr>
-            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>$1000+ for design and development. Cost determined by features.</div>
-            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>Professional website hosting.</div>
-            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>Design determined by your needs.</div>
-            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>Free text and image updates. </div>
             <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>24/7 monitoring and support.</div>
             <div class="pricing-feature" style="color:var(--muted)"><i class="bi bi-x-circle" style="color:var(--muted)"></i>Payments</div>
             <button class="btn btn-teal w-100 mt-3" onclick="showPage('contact')">Contact us!</button>
@@ -301,12 +286,28 @@
 
         <div class="col-md-4">
           <div class="pricing-card">
+            <p class="eyebrow mb-1">Option 2</p>
+            <div class="price-val">$3000+</div>
+            <p class="small text-muted-custom mt-1 mb-3">For businesses with complex needs.</p>
+            <hr>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>Pay for your site up front.</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>Professional website hosting at $25/mo.</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>Pricing determined by design.</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>Free text and image updates. </div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>24/7 monitoring and support.</div>
+            <div class="pricing-feature" style="color:var(--muted)"><i class="bi bi-x-circle" style="color:var(--muted)"></i>Payments</div>
+            <button class="btn btn-outline-teal w-100 mt-3" onclick="showPage('contact')">Contact us!</button>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="pricing-card">
             <p class="eyebrow mb-1">Digital Storefront</p>
-            <div class="price-val">$250+<span class="price-period">/mo</span></div>
+            <div class="price-val">$7500+</div>
             <p class="small text-muted-custom mt-1 mb-3">For businesses who want to sell products through the internet.</p>
             <hr>
-            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>$10,000+ for design and development.</div>
-            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>All benefits from the Almost Full Package.</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>$7,500+ for design and development.</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>Professional website hosting for $50/mo.</div>
             <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>Payment Integration through Stripe.</div>
             <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>24/7 monitoring and support.</div>
             <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i>Extra Secure hosting.</div>
@@ -315,7 +316,7 @@
         </div>
 
       </div>
-
+      <p class="text-center text-muted-custom small">Existing customers wanting new features <a href="#" onclick="showPage('contact')">Contact us!</a></p>
       <p class="text-center text-muted-custom small mt-4">All prices in USD. <a href="#" onclick="showPage('products')" style="color:var(--teal)">View our product comparison →</a></p>
     </div>
   </section>
