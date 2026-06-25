@@ -738,59 +738,79 @@
   </div>
 
   <section class="section">
-    <div class="container">
-      <div class="row g-5">
-        <div class="col-lg-6">
-          <div class="row g-3">
-            <div class="col-sm-6">
-              <label>First name</label>
-              <input class="contact-input" type="text" placeholder="Jane">
-            </div>
-            <div class="col-sm-6">
-              <label>Last name</label>
-              <input class="contact-input" type="text" placeholder="Doe">
-            </div>
-            <div class="col-12">
-              <label>Email address</label>
-              <input class="contact-input" type="email" placeholder="jane@example.com">
-            </div>
-            <div class="col-12">
-              <label>Subject</label>
-              <select class="contact-input">
-                <option>General enquiry</option>
-                <option>Sales question</option>
-                <option>Technical support</option>
-                <option>Partnership</option>
-              </select>
-            </div>
-            <div class="col-12">
-              <label>Message</label>
-              <textarea class="contact-input" rows="5" placeholder="Tell us what's on your mind…"></textarea>
-            </div>
-            <div class="col-12">
-              <button class="btn btn-teal px-4">Send message</button>
-            </div>
+  <div class="container">
+    <div class="row g-5 align-items-start">
+
+      <!-- Left: intro copy -->
+      <div class="col-lg-6">
+        <h2 style="font-family:'Syne',sans-serif;font-weight:700;font-size:2rem;margin-bottom:.5rem;">
+          Let's talk
+        </h2>
+        <div class="teal-divider mb-4"></div>
+        <p class="text-muted-custom" style="font-size:1.05rem;line-height:1.7;max-width:420px;">
+          Have a question, project idea, or just want to say hello? Reach out — we'd love to hear from you.
+          Click the email below to open your mail client with everything pre-filled.
+        </p>
+
+        
+          <a href="mailto:ethan@dragons-quill.com?subject=Hello%20from%20the%20website"
+          class="btn btn-teal px-4 mt-3"
+          style="display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;">
+          <i class="bi bi-envelope-fill"></i>
+          Send us an email
+        </a>
+      </div>
+
+      <!-- Right: contact details -->
+      <div class="col-lg-6">
+        <h5 style="font-family:'Syne',sans-serif;font-weight:700;">Other ways to reach us</h5>
+        <div class="teal-divider mb-4"></div>
+
+        <div class="d-flex gap-3 mb-4 align-items-start">
+          <div class="feature-icon flex-shrink-0"><i class="bi bi-envelope-fill"></i></div>
+          <div>
+            <strong>Email</strong><br>
+            
+              <a href="mailto:ethan@dragons-quill.com?subject=Hello%20from%20the%20website"
+              class="text-muted-custom small"
+              style="text-decoration:none;"
+              onmouseover="this.style.textDecoration='underline'"
+              onmouseout="this.style.textDecoration='none'">
+              ethan@dragons-quill.com
+            </a>
           </div>
         </div>
-        <div class="col-lg-6">
-          <h5 style="font-family:'Syne',sans-serif;font-weight:700">Other ways to reach us</h5>
-          <div class="teal-divider"></div>
-          <div class="d-flex gap-3 mb-3">
-            <div class="feature-icon flex-shrink-0"><i class="bi bi-envelope-fill"></i></div>
-            <div><strong>Email</strong><br><span class="text-muted-custom small">contact@dragons-quill.com</span></div>
+
+        <div class="d-flex gap-3 mb-4 align-items-start">
+          <div class="feature-icon flex-shrink-0"><i class="bi bi-telephone-fill"></i></div>
+          <div>
+            <strong>Phone</strong><br>
+            
+              <a href="tel:+19712095091"
+              class="text-muted-custom small"
+              style="text-decoration:none;"
+              onmouseover="this.style.textDecoration='underline'"
+              onmouseout="this.style.textDecoration='none'">
+              (971) 209-5091
+            </a>
           </div>
-          <div class="d-flex gap-3 mb-3">
-            <div class="feature-icon flex-shrink-0"><i class="bi bi-telephone-fill"></i></div>
-            <div><strong>Phone</strong><br><span class="text-muted-custom small">(971) 209-5091</span></div>
-          </div>
-          <div class="d-flex gap-3">
-            <div class="feature-icon flex-shrink-0"><i class="bi bi-clock-fill"></i></div>
-            <div><strong>Hours</strong><br><span class="text-muted-custom small">Mon – Fri, 7 AM – 7 PM PT<br>Emergency Support: 24/7</span></div>
+        </div>
+
+        <div class="d-flex gap-3 align-items-start">
+          <div class="feature-icon flex-shrink-0"><i class="bi bi-clock-fill"></i></div>
+          <div>
+            <strong>Hours</strong><br>
+            <span class="text-muted-custom small">
+              Mon – Fri, 7 AM – 7 PM PT<br>
+              Emergency Support: 24/7
+            </span>
           </div>
         </div>
       </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
 </div>
 
